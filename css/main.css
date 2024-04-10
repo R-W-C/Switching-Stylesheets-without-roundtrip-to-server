@@ -1,0 +1,9 @@
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  height: 500px;
+  margin: 120px;
+  border: 1px solid blue;
+}

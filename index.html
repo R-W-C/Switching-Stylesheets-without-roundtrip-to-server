@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dynamically load style sheet</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link id="theme-link" rel="stylesheet" href="css/day.css">
+</head>
+
+<body>
+<header>
+	<input type="radio" id="day-theme" name="theme" checked>Day theme</a>&nbsp;
+	<input type="radio" id="night-theme" name="theme">Night theme</a>
+</header>
+<main>
+	<div>Hello world!</div>
+</main>
+   <script type="text/javascript">
+
+		document.querySelectorAll("input[name='theme']").forEach((input) => { input.addEventListener('change', setStyleSheetHref); });
+
+		function setStyleSheetHref(event)
+		{
+			document.getElementById('theme-link').setAttribute('href', event.target.id == 'day-theme' ?  'css/day.css' : 'css/night.css');
+		}
+   </script>
+</body>
+</html>
